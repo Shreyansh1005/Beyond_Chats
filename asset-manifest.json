@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Beyond_Chats/static/css/main.01bc108a.css",
-    "main.js": "/Beyond_Chats/static/js/main.7f34751e.js",
+    "main.js": "/Beyond_Chats/static/js/main.c43a7091.js",
     "index.html": "/Beyond_Chats/index.html",
     "main.01bc108a.css.map": "/Beyond_Chats/static/css/main.01bc108a.css.map",
-    "main.7f34751e.js.map": "/Beyond_Chats/static/js/main.7f34751e.js.map"
+    "main.c43a7091.js.map": "/Beyond_Chats/static/js/main.c43a7091.js.map"
   },
   "entrypoints": [
     "static/css/main.01bc108a.css",
-    "static/js/main.7f34751e.js"
+    "static/js/main.c43a7091.js"
   ]
 }
