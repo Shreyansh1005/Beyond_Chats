@@ -291,7 +291,7 @@
 @media screen and (max-width: 768px) {
     .chatbot-integration-container {
         padding: 20px;
-        max-width: 95%;
+        max-width: 90%; /* Adjusted for better responsiveness */
     }
 
     .button-group {
@@ -333,7 +333,7 @@
 @media screen and (max-width: 576px) {
     .chatbot-integration-container {
         padding: 15px;
-        max-width: 95%;
+        max-width: 95%; /* Adjusted for better responsiveness */
     }
 
     .integration-instructions {
@@ -365,7 +365,7 @@
 @media screen and (max-width: 480px) {
     .chatbot-integration-container {
         padding: 10px;
-        max-width: 100%;
+        max-width: 100%; /* Adjusted for better responsiveness */
     }
 
     .integration-instructions {
