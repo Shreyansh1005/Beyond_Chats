@@ -1,0 +1,229 @@
+/* General styling */
+* {
+  box-sizing: border-box; /* Ensures padding and border do not affect element's width/height */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Using a more modern font */
+  background-color: #f7f7f7;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+main {
+  flex-grow: 1;
+  overflow-y: auto; /* Prevent overflow under navbar */
+}
+
+/* Setup Container */
+.setup-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  margin: 20 auto;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  min-height: 100vh;
+  height: auto;
+  animation: fadeIn 0.8s ease-out; /* Animation for smooth appearance */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Title and subtitle */
+.setup-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Added styling to make the title standout */
+}
+
+.setup-container h3 {
+  color: #444;
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Form elements */
+.setup-container input,
+.setup-container textarea,
+.setup-container button {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+}
+
+/* Focus states for input and button */
+.setup-container input:focus,
+.setup-container textarea:focus,
+.setup-container button:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Button styling */
+.setup-container button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.setup-container button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.setup-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Textarea styling */
+textarea {
+  height: 160px;
+  resize: vertical;
+  border-color: #ddd;
+}
+
+/* Webpages Section */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+ul li {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+ul li:hover {
+  transform: translateY(-5px); /* Subtle hover animation */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+ul li span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+ul li b {
+  color: #28a745;
+  font-weight: bold;
+}
+
+ul li ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+ul li ul li {
+  font-size: 15px;
+  color: #555;
+}
+
+ul li ul li::before {
+  content: "• ";
+  color: #007bff;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .setup-container {
+      padding: 20px;
+  }
+
+  .setup-container h2 {
+      font-size: 28px;
+  }
+
+  .setup-container input,
+  .setup-container textarea,
+  .setup-container button {
+      padding: 14px;
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Reduce body padding on smaller screens */
+  }
+
+  .setup-container {
+    padding: 20px;
+    max-width: 100%; /* Ensure container fits smaller screens */
+    margin: 20px auto; /* Adjust margin for smaller screens */
+  }
+
+  .setup-container h2 {
+    font-size: 28px;
+  }
+
+  .setup-container input,
+  .setup-container textarea,
+  .setup-container button {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  ul li {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .setup-container {
+    padding: 15px;
+  }
+
+  .setup-container h2 {
+    font-size: 24px; /* Further reduce the font size for smaller screens */
+  }
+
+  .setup-container input,
+  .setup-container textarea,
+  .setup-container button {
+    padding: 12px;
+    font-size: 14px; /* Adjust input fields and button size */
+  }
+
+  ul li {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

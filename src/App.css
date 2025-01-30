@@ -1,0 +1,36 @@
+/* Ensure the app takes up the full width */
+.app {
+  width: 100%;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  box-sizing: border-box; /* Make sure padding/margin doesn't affect the width */
+}
+
+/* Make sure the container takes the full width */
+.container {
+  width: 100%;
+  padding: 0; /* Reset padding */
+  box-sizing: border-box; /* Prevent any overflow */
+}
+
+/* Full Width Setup Page */
+.setup-page {
+  width: 100%; /* Ensure setup page takes full width */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add more specific layout handling for the setup page if needed */
+.setup-page .setup-container {
+  max-width: none; /* Allow the setup container to take full width */
+  width: 100%;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Ensure the chatbot integration also fits within the full width */
+.setup-page .chatbot-integration {
+  width: 100%;
+  padding: 20px;
+}
+  

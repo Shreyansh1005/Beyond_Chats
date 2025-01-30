@@ -1,0 +1,405 @@
+/* Chatbot Integration Container */
+.chatbot-integration-container {
+    padding: 30px;
+    background-color: #ffffff; /* Keep white, but add subtle contrast */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Slightly darker shadow for contrast */
+    border: 1px solid #ddd; /* Light border to make container stand out */
+}
+
+.chatbot-integration-container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 48%;
+}
+
+.test-chatbot-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 5px;
+}
+
+.test-chatbot-btn:hover {
+    background-color: #45a049;
+}
+
+.integrate-chatbot-btn {
+    background-color: #007bff;
+    color: white;
+    margin-right: 5px;
+}
+
+.integrate-chatbot-btn:hover {
+    background-color: #0056b3;
+}
+
+.show-success-ui-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.show-success-ui-btn:hover {
+    background-color: #218838;
+}
+
+/* Integration Instructions Styling */
+.integration-instructions {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%); /* Start from the right */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add visible state */
+.integration-instructions.show {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+}
+
+/* Heading */
+.integration-instructions h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Paragraph and Code */
+.integration-instructions p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.integration-instructions code {
+    font-size: 14px;
+    background-color: #f4f4f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #d63384;
+}
+
+/* Preformatted Text (Script) */
+.integration-instructions pre {
+    background-color: #f7f7f7;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Button */
+.send-email-btn {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.send-email-btn:hover {
+    background-color: #e68900;
+}
+
+/* Success UI */
+.success-ui {
+    background-color: #d4edda;
+    padding: 20px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Slide up effect */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.success-ui.show {
+    opacity: 1;
+    transform: translateY(0); /* Reset to original position */
+}
+
+.success-ui h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #155724;
+}
+
+.success-ui p {
+    font-size: 16px;
+    color: #155724;
+}
+
+.success-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.success-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.explore-admin-btn {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.explore-admin-btn:hover {
+    background-color: #138496;
+}
+
+.start-chat-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.start-chat-btn:hover {
+    background-color: #218838;
+}
+
+.social-sharing {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-sharing button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-sharing button:hover {
+    opacity: 0.8;
+}
+
+.social-sharing button:nth-child(1) {
+    background-color: #3b5998; /* Facebook */
+    color: white;
+}
+
+.social-sharing button:nth-child(2) {
+    background-color: #1da1f2; /* Twitter */
+    color: white;
+}
+
+.social-sharing button:nth-child(3) {
+    background-color: #0077b5; /* LinkedIn */
+    color: white;
+}
+
+/* Failure UI */
+.failure-ui {
+    background-color: #f8d7da;
+    padding: 20px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.failure-ui h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #721c24;
+}
+
+.failure-ui p {
+    font-size: 16px;
+    color: #721c24;
+}
+
+.reset-btn {
+    padding: 12px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #d32f2f;
+}
+
+@media screen and (max-width: 768px) {
+    .chatbot-integration-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .integration-instructions {
+        padding: 15px;
+        margin: 10px auto; /* Centering the container */
+        width: 90%;
+        transform: translateX(0); /* Prevent shifting */
+    }
+
+    .integration-instructions h3 {
+        font-size: 20px;
+    }
+
+    .integration-instructions p {
+        font-size: 14px;
+    }
+
+    .integration-instructions pre {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .success-ui,
+    .failure-ui {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .chatbot-integration-container {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .integration-instructions {
+        padding: 10px;
+        margin: 10px auto;
+        width: 95%;
+        transform: translateX(0); /* Prevent shifting */
+    }
+
+    .integration-instructions h3 {
+        font-size: 18px;
+    }
+
+    .integration-instructions p {
+        font-size: 13px;
+    }
+
+    .integration-instructions pre {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .send-email-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chatbot-integration-container {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .integration-instructions {
+        padding: 8px;
+        margin: 10px auto;
+        width: 98%;
+        transform: translateX(0); /* Prevent shifting */
+    }
+
+    .integration-instructions h3 {
+        font-size: 16px;
+    }
+
+    .integration-instructions p {
+        font-size: 12px;
+    }
+
+    .integration-instructions pre {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .send-email-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+}
