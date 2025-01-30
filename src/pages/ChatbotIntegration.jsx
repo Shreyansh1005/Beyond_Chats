@@ -73,7 +73,7 @@ const ChatbotIntegration = () => {
       {/* Topbar for feedback */}
       {showTopbar && (
         <div className="topbar">
-          <p>Chatbot not working as intended? <a href="#">Share feedback</a></p>
+          <p style={{color:"black"}}>Chatbot not working as intended? <a href="#">Share feedback</a></p>
         </div>
       )}
 
@@ -117,7 +117,7 @@ const ChatbotIntegration = () => {
             className="show-success-ui-btn"
             onClick={handleShowSuccessUI}
           >
-            Show Integration Success
+           Test Integration
           </button>
         )}
       </motion.div>

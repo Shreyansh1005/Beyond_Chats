@@ -147,17 +147,61 @@
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
     .chatbot-container {
-        width: 280px;
-        height: 400px;
-        bottom: 10px;
-        right: 10px;
-    }
-
+        width: 100%;  /* Use full available width */
+        max-width: 300px;  /* Limit the maximum width to avoid overflow */
+        height: 150px;
+        bottom: 300px;  /* Position above the icon to prevent overlapping */
+        right: 40px;   /* Adjusted to prevent cut-off on the right */
+} 
     .chatbot-container h3 {
         font-size: 16px;
     }
 
     .dummy-website-message {
         font-size: 14px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .chatbot-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        bottom: 15px;   /* Slightly more space from the bottom */
+        right: 15px;    /* Slightly more space from the right */
+    }
+}
+
+/* For smaller mobile devices */
+@media screen and (max-width: 480px) {
+    .chatbot-icon {
+        width: 50px;   /* Increase size for easy tap */
+        height: 50px;
+        font-size: 24px;  /* Make the icon more prominent */
+        bottom: 20px;    /* More space from bottom for better positioning */
+        right: 15px;     /* Adjusted to prevent cut-off */
+    }
+
+    .chatbot-container {
+        width: 100%;  /* Use full available width */
+        max-width: 300px;  /* Limit the maximum width to avoid overflow */
+        height: 150px;
+        bottom: 300px;  /* Position above the icon to prevent overlapping */
+        right: 40px;   /* Adjusted to prevent cut-off on the right */
+    }
+
+    .chatbot-container h3 {
+        font-size: 14px; /* Slightly increase font size for readability */
+    }
+}
+
+
+/* For extra small screens (e.g., very small phones) */
+@media screen and (max-width: 320px) {
+    .chatbot-icon {
+        width: 45px;   /* Adjust size */
+        height: 45px;
+        font-size: 20px;  /* Slightly smaller font */
+        bottom: 15px;    /* Reduced space from the bottom */
+        right: 15px;     /* Reduced space from the right */
     }
 }

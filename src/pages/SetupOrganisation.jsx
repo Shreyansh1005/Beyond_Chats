@@ -81,8 +81,16 @@ const SetupOrganisation = () => {
         <input
           type="text"
           placeholder="Company Website URL"
-          value={websiteURL}
-          onChange={(e) => setWebsiteURL(e.target.value)}
+          value={websiteURL.startsWith("http://") ? websiteURL : "http://" + websiteURL}
+          onChange={(e) => {
+            // Ensure the website starts with "http://"
+            const value = e.target.value;
+            if (!value.startsWith("http://")) {
+              setWebsiteURL(value);
+            } else {
+              setWebsiteURL(value);
+            }
+          }}
         />
         <button type="button" onClick={handleFetchMetaDescription}>
           Auto-Fetch Description
