@@ -44,6 +44,7 @@ const Login = () => {
           className="input-field"
           value={formData.email}
           onChange={handleChange}
+          autocomplete="username" // Add the autocomplete attribute
           required
         />
         <div className="password-container">
