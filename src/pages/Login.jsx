@@ -54,6 +54,7 @@ const Login = () => {
             className="input-field"
             value={formData.password}
             onChange={handleChange}
+            autocomplete="current-password"
             required
           />
           <i
