@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Beyond_Chats/static/css/main.fdd08786.css",
+    "main.js": "/Beyond_Chats/static/js/main.7f34751e.js",
+    "index.html": "/Beyond_Chats/index.html",
+    "main.fdd08786.css.map": "/Beyond_Chats/static/css/main.fdd08786.css.map",
+    "main.7f34751e.js.map": "/Beyond_Chats/static/js/main.7f34751e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdd08786.css",
+    "static/js/main.7f34751e.js"
+  ]
+}
