@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+# BeyondChats
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BeyondChats is an AI-powered chatbot integration platform that allows users to integrate chatbots into their websites, test them, and manage chatbot interactions efficiently.
 
-## Available Scripts
+## 🚀 Features
+- Register and set up your organization.
+- Auto-fetch metadata from websites.
+- Scrape and train chatbot with website data.
+- Test chatbot integration.
+- Deploy chatbot on a dummy website.
+- Responsive UI with smooth animations.
+- GitHub Pages & Vercel Deployment.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📂 Project Structure
+```
+Beyond_Chats/
+│── public/          # Static assets
+│── src/             # Source code
+│   ├── components/  # React components
+│   ├── pages/       # Application pages
+│   ├── styles/      # CSS files
+│   ├── hooks/       # Custom hooks
+│   ├── App.js       # Main App component
+│   ├── index.js     # Entry point
+│── package.json     # Dependencies and scripts
+│── README.md        # Documentation
+│── .gitignore       # Git ignored files
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Installation & Setup
 
-### `npm test`
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/shreyansh1005/Beyond_Chats.git
+cd Beyond_Chats
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **2️⃣ Install Dependencies**
+```bash
+npm install
+```
 
-### `npm run build`
+### **3️⃣ Run the Development Server**
+```bash
+npm start
+```
+- The app will be available at `http://localhost:3000/`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌍 Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **GitHub Pages Deployment**
 
-### `npm run eject`
+### **1️⃣ Install GitHub Pages Package**
+```bash
+npm install gh-pages --save-dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **2️⃣ Update `package.json`**
+Add the following line in `package.json`:
+```json
+"homepage": "https://shreyansh1005.github.io/Beyond_Chats/"
+```
+Modify scripts:
+```json
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **3️⃣ Deploy the Project**
+```bash
+npm run deploy
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **Vercel Deployment**
 
-## Learn More
+### **1️⃣ Install Vercel CLI**
+```bash
+npm install -g vercel
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **2️⃣ Login to Vercel**
+```bash
+vercel login
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **3️⃣ Deploy the Project**
+```bash
+vercel
+```
+Follow the CLI prompts to configure and deploy your project.
+Your project will be live at: https://beyondchats-five.vercel.app
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔧 Troubleshooting
 
-### Analyzing the Bundle Size
+### **❌ Page Not Found Error**
+- Ensure `homepage` is correctly set in `package.json`.
+- Use `BrowserRouter` with `basename="/Beyond_Chats"` in `index.js`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **❌ Styles Not Loading Properly**
+- Make sure CSS files are correctly linked in components.
+- Clear cache and refresh the browser.
 
-### Making a Progressive Web App
+### **❌ Integration Instructions Overlapping UI**
+- Ensure media queries properly adjust `.integration-instructions`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 💡 Usage Guide
+### **1️⃣ Register & Setup**
+- Navigate to `/register` to create an account.
+- Enter company name, website URL, and fetch metadata.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### **2️⃣ Scrape & Train Chatbot**
+- Detected webpages will be listed with scraped content.
+- Click `Proceed to Integration` after training.
 
-### Deployment
+### **3️⃣ Test Chatbot**
+- Click `Test Integration` to check chatbot functionality.
+- Visit dummy website for live testing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### **4️⃣ Deploy Chatbot**
+- Copy integration script and add it inside `<head>` tag.
+- Confirm successful integration.
 
-### `npm run build` fails to minify
+### **5️⃣ Explore the Website**
+- Visit https://beyondchats-five.vercel.app
+- Start with the Register page.
+- Follow the steps to integrate and test your chatbot.
+- Use the dummy website to validate chatbot functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+
+## ✨ Contributors
+- **Shreyansh Dubey** - Developer
+
+📩 For any issues, feel free to open an [issue](https://github.com/shreyansh1005/Beyond_Chats/issues) on GitHub.
+
