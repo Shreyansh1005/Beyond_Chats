@@ -124,26 +124,32 @@ const ChatbotIntegration = () => {
 
       {/* Integration Instructions with animation */}
       {showInstructions && (
-        <motion.div
-          className={`integration-instructions ${showInstructions ? 'show' : ''}`}
-          initial={{ x: '100%' }}
-          animate={{ x: 0 }}
-          transition={{ type: 'spring', stiffness: 100 }}
-        >
-          <h3>How to Integrate the Chatbot</h3>
-          <p>
-            Copy and paste the following script inside the{' '}
-            <code>&lt;head&gt;</code> tag of your website:
-          </p>
-          <pre>{`<script src="https://code.tidio.co/ol0qkcqteoiuyoj2cxllst8kprulla0q.js" async></script>`}</pre>
-          <button
-            className="send-email-btn"
-            onClick={() => alert('Integration instructions sent!')}
-          >
-            Send Instructions to Developer
-          </button>
-        </motion.div>
-      )}
+  <div className="modal-overlay">
+    <motion.div
+      className="modal-content"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <h3>How to Integrate the Chatbot</h3>
+      <p>
+        Copy and paste the following script inside the{' '}
+        <code>&lt;head&gt;</code> tag of your website:
+      </p>
+      <pre style={{overflowX:"scroll", scrollbarWidth: "thin",  msOverflowStyle: "none"}}>{`<script src="https://code.tidio.co/ol0qkcqteoiuyoj2cxllst8kprulla0q.js" async></script>`}</pre>
+      <button
+        className="send-email-btn"
+        onClick={() => alert('Integration instructions sent!')}
+      >
+        Send Instructions to Developer
+      </button>
+      <button className="close-modal-btn" onClick={() => setShowInstructions(false)}>
+        Close
+      </button>
+    </motion.div>
+  </div>
+)}
+
 
       {/* Success UI with animation, shown only after visiting dummy site and clicking the button */}
       {visitedDummySite && showSuccessUI && integrationStatus === "success" && (

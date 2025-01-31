@@ -83,80 +83,77 @@
     background-color: #218838;
 }
 
-/* Integration Instructions Styling */
-.integration-instructions {
-    background-color: #f7f7f7;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Initially hidden */
-    transform: translateX(100%); /* Start from the right */
-    transition: all 0.3s ease-in-out;
-}
-
-/* Add visible state */
-.integration-instructions.show {
-    opacity: 1;
-    transform: translateX(0); /* Move to original position */
-}
-
-/* Heading */
-.integration-instructions h3 {
-    font-size: 22px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* Paragraph and Code */
-.integration-instructions p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.integration-instructions code {
-    font-size: 14px;
-    background-color: #f4f4f4;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-family: monospace;
-    color: #d63384;
-}
-
-/* Preformatted Text (Script) */
-.integration-instructions pre {
-    background-color: #f7f7f7;
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
     color: black;
-    padding: 15px;
-    border-radius: 5px;
-    font-family: monospace;
-    overflow-x: auto;
-    border: 1px solid #ddd;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it appears above everything */
 }
 
-/* Button */
-.send-email-btn {
-    margin-top: 15px;
-    padding: 12px 20px;
-    background-color: #ff9800;
+/* Modal Content Box */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-modal-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff4d4d;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    transition: background 0.3s;
+}
+
+.close-modal-btn:hover {
+    background: #d32f2f;
+}
+
+/* Button Styling */
+.send-email-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .send-email-btn:hover {
-    background-color: #e68900;
+    background-color: #0056b3;
 }
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 
 /* Success UI */
 .success-ui {
@@ -303,98 +300,26 @@
         width: 100%;
         margin-bottom: 10px;
     }
-
-    .integration-instructions {
-        padding: 15px;
-        margin: 10px auto; /* Centering the container */
-        width: 90%;
-        transform: translateX(0); /* Prevent shifting */
-    }
-
-    .integration-instructions h3 {
-        font-size: 20px;
-    }
-
-    .integration-instructions p {
-        font-size: 14px;
-    }
-
-    .integration-instructions pre {
-        font-size: 14px;
-        padding: 10px;
-    }
+}
 
     .success-ui,
     .failure-ui {
         padding: 15px;
     }
-}
 
 @media screen and (max-width: 576px) {
     .chatbot-integration-container {
-        padding-left:30px;
+        padding-left:20px;
         max-width: 95%; /* Adjusted for better responsiveness */
-    }
-
-    .integration-instructions {
-        padding: 10px;
-        margin: 10px auto;
-        width: 50%;
-        transform: translateX(0); /* Prevent shifting */
-    }
-
-    .integration-instructions h3 {
-        font-size: 18px;
-    }
-
-    .integration-instructions p {
-        font-size: 13px;
-    }
-
-    .integration-instructions pre {
-        font-size: 13px;
-        padding: 8px;
-    }
-
-    .send-email-btn {
-        padding: 10px 15px;
-        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .chatbot-integration-container {
-        margin-left:170px;
-        max-width: 100%; /* Adjusted for better responsiveness */
+        max-width: 98%; /* Adjusted for better responsiveness */
         align-items: center;
         justify-content: center;
     }
-
-    .integration-instructions {
-        padding: 8px;
-        margin: 10px auto;
-        width: 70%;
-        transform: translateX(0); /* Prevent shifting */
-    }
-
-    .integration-instructions h3 {
-        font-size: 16px;
-    }
-
-    .integration-instructions p {
-        font-size: 12px;
-    }
-
-    .integration-instructions pre {
-        font-size: 12px;
-        padding: 6px;
-    }
-
-    .send-email-btn {
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-
     .button-group {
         flex-direction: column;
         align-items: center;
@@ -403,5 +328,21 @@
     .button-group button {
         width: 100%;
         margin-bottom: 8px;
+
+    }
+    .success-buttons button{
+        margin-right: 3px;
+    }
+    .social-sharing{
+        display: flex;
+        flex-direction: column;
+    }
+    .social-sharing button{
+        margin-top: 5px;
+        height: 40px;
+    }
+    .modal-content {
+        width: 95%;
+        padding: 15px;
     }
 }
